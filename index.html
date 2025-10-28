@@ -6,37 +6,54 @@
   <title>Su delle Alpi</title>
   <style>
     html, body {
-      height: 100%;
       margin: 0;
+      padding: 0;
+      height: 100%;
       background-color: #000;
+    }
+
+    /* make the image fill the screen nicely */
+    body {
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: 1.5rem;
+      flex-direction: column;
     }
+
     img {
-      max-width: 90vw;
-      height: auto;
-      border-radius: 8px;
-      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;     /* ensures image fills but keeps aspect ratio */
+      object-position: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
     }
+
+    /* email link styling */
     a {
-      color: #fff;
+      position: relative;
+      z-index: 1;
+      color: white;
       font-family: system-ui, sans-serif;
       text-decoration: none;
-      padding: 0.5em 0.8em;
+      font-size: 1.2rem;
+      background-color: rgba(0,0,0,0.4);
+      padding: 0.4em 0.8em;
       border-radius: 6px;
-      background: rgba(255,255,255,0.15);
+      margin-top: auto;
+      margin-bottom: 40px;   /* pushes it near bottom */
       transition: background 0.2s;
     }
+
     a:hover {
-      background: rgba(255,255,255,0.3);
+      background-color: rgba(255,255,255,0.25);
     }
   </style>
 </head>
 <body>
-  <img src="03_EXPORT_01.jpg" alt="Su delle Alpi" />
+  <img src="03_EXPORT_01.jpg" alt="Su delle Alpi">
   <a href="mailto:mattiapassardi@gmail.com">mattiapassardi@gmail.com</a>
 </body>
 </html>
