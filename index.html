@@ -18,20 +18,46 @@
       background-color: #000;
     }
 
+    .image-container {
+      position: relative;
+      width: 100%;
+    }
+
     img {
-      width: 100%;          /* fit screen width */
-      height: auto;         /* preserve proportions */
+      width: 100%;
+      height: auto;
       display: block;
       margin: 0;
       padding: 0;
     }
+
+    /* invisible clickable box */
+    .email-box {
+      position: absolute;
+      /* adjust these % to match the position of the email in the first image */
+      bottom: 3%;     /* distance from bottom of the image */
+      left: 60%;
+      transform: translateX(-40%);
+      width: 60%;      /* width of clickable zone */
+      height: 5%;      /* height of clickable zone */
+      cursor: pointer;
+      background: transparent;
+    }
   </style>
 </head>
 <body>
-  <img src="03_EXPORT_01.jpg" alt="">
+
+  <!-- FIRST IMAGE (with clickable box) -->
+  <div class="image-container">
+    <img src="03_EXPORT_01.jpg" alt="">
+    <a href="mailto:mattiapassardi@gmail.com" class="email-box"></a>
+  </div>
+
+  <!-- OTHER IMAGES -->
   <img src="03_EXPORT_02.jpg" alt="">
   <img src="03_EXPORT_03.jpg" alt="">
   <img src="03_EXPORT_04.jpg" alt="">
   <img src="03_EXPORT_05.jpg" alt="">
+
 </body>
 </html>
